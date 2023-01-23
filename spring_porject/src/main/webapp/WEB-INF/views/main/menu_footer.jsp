@@ -34,7 +34,7 @@
       
     <div class="footer-standard">
 	  <div class="footer-subtitle">Company</div>
-		  <a href="/TeamProject02/companyInfo.jsp"class="footer-menu-item">About Us</a>  
+		  <a href="/info"class="footer-menu-item">About Us</a>  
 		  <a href="/TeamProject02/portfolio.jsp"class="footer-menu-item">History</a>
     </div>
       
@@ -52,7 +52,7 @@
     
   <div class="character">
 	  <div class="icon-box">
- 		 <a href="/TeamProject02/mainPage.html">
+ 		 <a href="/mainPage">
      	 <i class="fa-solid fa-house icon"></i></a>
       </div>  
 
