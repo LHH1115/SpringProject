@@ -2,18 +2,22 @@ package com.example.demo.recruit.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@Table(name = "RECRUITBOARD")
+@NoArgsConstructor
 public class RecruitBoard {
 
 	@Id
-	public int rbNo;
+	public int RBNO;
 	
-	public String rbTitle;
-	public String rbStartDate;
-	public String rbEndDate;
-	public String rbContent;
-	public int rbWork;	
+	public String RBTITLE;
+	public String RBSTARTDATE;
+	public String RBENDDATE;
+	public String RBCONTENT;
+	public int RBWORK;	
 }

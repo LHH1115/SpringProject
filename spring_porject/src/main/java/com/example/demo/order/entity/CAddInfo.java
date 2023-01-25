@@ -1,4 +1,4 @@
-package com.example.demo.recruit.entity;
+package com.example.demo.order.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -10,16 +10,16 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@Table(name = "ALINK")
+@Table(name = "CADDINFO")
 @NoArgsConstructor
-public class ALink {
+public class CAddInfo {
 
 	@Id
-	private int ALINKNO;
+	private int ADDINFONO;
 	
-	private String LINK;
-	
+	private String CONTENT;
+
 	@ManyToOne
-	@JoinColumn(name ="ANO", insertable = true, updatable = true)
-	private ApplicantNew applicantNew;
+	@JoinColumn(name ="CNO", insertable = true, updatable = true)
+	private CustomerNew customerNew;
 }

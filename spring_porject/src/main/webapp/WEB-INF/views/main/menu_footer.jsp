@@ -34,7 +34,7 @@
       
     <div class="footer-standard">
 	  <div class="footer-subtitle">Company</div>
-		  <a href="/info"class="footer-menu-item">About Us</a>  
+		  <a href="/info" class="footer-menu-item">About Us</a>  
 		  <a href="/TeamProject02/portfolio.jsp"class="footer-menu-item">History</a>
     </div>
       
