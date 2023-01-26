@@ -20,4 +20,8 @@ public class OrderService {
 	public List<CustomerNew> findAll(){
 		return dao.findAll();
 	}
+	
+	public void insert(CustomerNew c) {
+		dao.insert(c);
+	}
 }

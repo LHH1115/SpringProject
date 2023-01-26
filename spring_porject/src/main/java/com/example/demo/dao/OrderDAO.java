@@ -1,7 +1,5 @@
 package com.example.demo.dao;
 
-import java.util.List;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -15,12 +13,11 @@ import jakarta.transaction.Transactional;
 @EnableJpaRepositories("com.acme.repositories")
 public interface OrderDAO extends JpaRepository<CustomerNew, Integer> {
 
-//	@Modifying
-//	@Query(nativeQuery = true, value = "INSERT INTO Board "
-//			+ "b(b.no,b.id,b.pwd,b.title,b.content,b.ip,b.regdate,b.hit,b.bref,b.bstep,b.blevel,b.fname) "
-//			+ "VALUES(:#{#b.no},:#{#b.member.id},:#{#b.pwd},:#{#b.title},:#{#b.content},:#{#b.ip},SYSDATE,0,:#{#b.bref},:#{#b.bstep},:#{#b.blevel},:#{#b.fname})")
-//	@Transactional
-//	public void insert(@Param(value = "o") Order o);
-	
+	@Modifying
+	@Transactional
+	@Query(nativeQuery = true, value = "INSERT INTO CUSTOMERNEW "
+			+ "C(C.CNO,C.CNAME,C.CPHONE,C.CADDR,C.CMANAGER,C.CEMAIL,C.CSERVICE,C.CPRICE,C.CINFO,C.CPORTFOLIO) "
+			+ "VALUES(seq_customer.nextval,:#{#c.CNAME},:#{#c.CPHONE},:#{#c.CADDR},:#{#c.CMANAGER},:#{#c.CEMAIL},:#{#c.CSERVICE},:#{#c.CPRICE},:#{#c.CINFO},:#{#c.CPORTFOLIO})")
+	public void insert(@Param(value = "c") CustomerNew c);
 	
 }
