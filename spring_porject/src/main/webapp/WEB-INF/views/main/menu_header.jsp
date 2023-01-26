@@ -24,7 +24,7 @@
     <div class="wrap">
         <div class="menubar">
             <div class="menuLogo">
-                <a href="/mainPage"><img src="./image/grape1.png" width="170px"></a>
+                <a href="/"><img src="./image/grape1.png" width="170px"></a>
             </div>
             <ul class="menuItem">
                  <li>
@@ -38,23 +38,23 @@
                  <li>
                     <a href="">Portfolio</a>
                     <ul>
-                        <li><a href="/TeamProject02/portfolio.jsp">포트폴리오</a></li>
+                        <li><a href="/portfolio">포트폴리오</a></li>
                     </ul>
                  </li>
                 
                   <li>
                     <a href="">Connect</a>
                     <ul>
-                        <li><a href="/TeamProject02/order/newOrder.jsp">신규문의</a></li>
-                        <li><a href="/TeamProject02/order/oldOrderLogin.jsp">기존문의</a></li>
+                        <li><a href="/newOrder">신규문의</a></li>
+                        <li><a href="/oldOrderLogin">기존문의</a></li>
                     </ul>
                   </li>
                 
                    <li>
                     <a href="">Recruitment</a>
                     <ul>
-                        <li><a href="/TeamProject02/recruit/newRecruitBoard.jsp"> 신규채용</a></li>
-                        <li><a href="/TeamProject02/recruit/myRecruitLogin.jsp">나의 지원서</a></li>
+                        <li><a href="/newRecruitBoard"> 신규채용</a></li>
+                        <li><a href="/myRecruitLogin">나의 지원서</a></li>
                     </ul>
                   </li>
             </ul>

@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-<link href="infobar.css" rel="stylesheet" type="text/css">
+<link href="/css/infobar.css" rel="stylesheet" type="text/css">
 
 <style type="text/css">
 .portfolioImages{
@@ -56,7 +56,7 @@ $(function(){
 		if(i<10){
 			no = "0"+i;
 		}
-		var src = "order/portfolioImages/IMG"+no+".jpg";
+		var src = "./portfolioImages/IMG"+no+".jpg";
 		var name = "IMG"+no+"jpg";
 		var div = $("<div></div>").addClass("imgDIV");
 		var a = $("<a href='"+data+"'></a>").attr("id","IMGlink");
@@ -90,7 +90,7 @@ $(function(){
 <div class="row">
 	<div class="col-md-4 col-sm-12 wrapper">
 		<div class="card">
-		   <img src="./order/portfolioImages/IMG01.jpg" width="100%">
+		   <img src="./portfolioImages/IMG01.jpg" width="100%">
 		<div class="card-body text-center">
    		
  <!-- Button trigger modal -->
@@ -125,7 +125,7 @@ $(function(){
 	
 	<div class="col-md-4 col-sm-12 wrapper">
 		<div class="card">
-		  <img src="./order/portfolioImages/IMG02.jpg" width="100%">
+		  <img src="./portfolioImages/IMG02.jpg" width="100%">
 		<div class="card-body text-center">
    <!-- Button trigger modal -->
  		 <button type="button" class="btn text-white" style="background-color: #9400d3;" data-bs-toggle="modal" data-bs-target="#port2">
@@ -157,7 +157,7 @@ $(function(){
 	
 	<div class="col-md-4 col-sm-12 wrapper mb-5">
 		<div class="card">
-		   <img src="./order/portfolioImages/IMG03.jpg" width="100%">
+		   <img src="./portfolioImages/IMG03.jpg" width="100%">
 		<div class="card-body text-center">
  <!-- Button trigger modal -->
  		 <button type="button" class="btn text-white" style="background-color: #9400d3;" data-bs-toggle="modal" data-bs-target="#port3">
@@ -190,7 +190,7 @@ $(function(){
 	
 	<div class="col-md-4 col-sm-12 wrapper">
 		<div class="card">
-		  <img src="./order/portfolioImages/IMG04.jpg" width="100%">
+		  <img src="./portfolioImages/IMG04.jpg" width="100%">
 		<div class="card-body text-center">
     <!-- Button trigger modal -->
  		 <button type="button" class="btn text-white" style="background-color: #9400d3;" data-bs-toggle="modal" data-bs-target="#port4">
@@ -220,7 +220,7 @@ $(function(){
 	
 	<div class="col-md-4 col-sm-12 wrapper">
 		<div class="card">
-		   <img src="./order/portfolioImages/IMG05.jpg" width="100%">
+		   <img src="./portfolioImages/IMG05.jpg" width="100%">
 		<div class="card-body text-center">
 	 <!-- Button trigger modal -->
  		 <button type="button" class="btn text-white" style="background-color: #9400d3;" data-bs-toggle="modal" data-bs-target="#port5">
@@ -250,7 +250,7 @@ $(function(){
 	
 	<div class="col-md-4 col-sm-12 wrapper mb-5">
 		<div class="card">
-		   <img src="./order/portfolioImages/IMG06.jpg" width="100%">
+		   <img src="./portfolioImages/IMG06.jpg" width="100%">
 		<div class="card-body text-center">
  <!-- Button trigger modal -->
  		 <button type="button" class="btn text-white" style="background-color: #9400d3;" data-bs-toggle="modal" data-bs-target="#port6">
@@ -280,7 +280,7 @@ $(function(){
 	
 	<div class="col-md-4 col-sm-12 wrapper">
 		<div class="card">
-		   <img src="./order/portfolioImages/IMG07.jpg" width="100%">
+		   <img src="./portfolioImages/IMG07.jpg" width="100%">
 		<div class="card-body text-center">
    			 <!-- Button trigger modal -->
  		 <button type="button" class="btn text-white" style="background-color: #9400d3;" data-bs-toggle="modal" data-bs-target="#port7">
@@ -310,7 +310,7 @@ $(function(){
 	
 	<div class="col-md-4 col-sm-12 wrapper">
 		<div class="card">
-		   <img src="./order/portfolioImages/IMG08.jpg" width="100%">
+		   <img src="./portfolioImages/IMG08.jpg" width="100%">
 		<div class="card-body text-center">
 <!-- Button trigger modal -->
  		 <button type="button" class="btn text-white" style="background-color: #9400d3;" data-bs-toggle="modal" data-bs-target="#port8">
@@ -340,7 +340,7 @@ $(function(){
 	
 	<div class="col-md-4 col-sm-12 wrapper mb-5">
 		<div class="card">
-		   <img src="./order/portfolioImages/IMG09.jpg" width="100%">
+		   <img src="./portfolioImages/IMG09.jpg" width="100%">
 		<div class="card-body text-center">
  <!-- Button trigger modal -->
  		 <button type="button" class="btn text-white" style="background-color: #9400d3;" data-bs-toggle="modal" data-bs-target="#port">
@@ -372,7 +372,7 @@ $(function(){
 	<div class="col-md-4 col-sm-12 wrapper">
 		<div class="card">
 		 
-		   <img src="./order/portfolioImages/IMG10.jpg" width="100%">
+		   <img src="./portfolioImages/IMG10.jpg" width="100%">
 		<div class="card-body text-center">
    			 <!-- Button trigger modal -->
  		 <button type="button" class="btn text-white" style="background-color: #9400d3;" data-bs-toggle="modal" data-bs-target="#port10">

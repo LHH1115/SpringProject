@@ -83,7 +83,7 @@
 <br>
 <br>
 <h3>부서소개</h3>
-<button type="button" onclick="location.href='recruit/newRecruitBoard.jsp'" class="button-style-recruit button-style-recruit:hover">채용 페이지로 이동</button>
+<button type="button" onclick="location.href='/newRecruitBoard'" class="button-style-recruit button-style-recruit:hover">채용 페이지로 이동</button>
 </div>
 <div class="container mb-5">
 <div class="row">

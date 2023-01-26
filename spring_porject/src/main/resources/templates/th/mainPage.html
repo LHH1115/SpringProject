@@ -149,19 +149,6 @@
         color:#9400d3;
     }
 
-   /* .menubar li ul a:hover,
-    .menubar li ul li:hover a{
-        background: white;
-        border:0px;
-        color:#9400d3;
-    }*/
-    
-
-
-
-
-
-
 main{
     height: 1100px;
     background-color: white;
@@ -263,21 +250,12 @@ main{
 }
 
 
-
-
 .photoSize2{
 	height: 200px;
 	padding: 80px;
 }
  
- 
- 
- 
- 
- 
- 
- 
- 
+
 
  footer{
 	  height: 480px;
@@ -413,7 +391,7 @@ main{
     <div class="wrap">
         <div class="menubar">
             <div class="menuLogo">
-                <a href="/mainPage"><img src="./image/grape1.png" width="170px"></a>
+                <a href="/"><img src="./image/grape1.png" width="170px"></a>
             </div>
             <ul class="menuItem">
                  <li>
@@ -427,23 +405,23 @@ main{
                  <li>
                     <a href="">Portfolio</a>
                     <ul>
-                        <li><a href="portfolio.jsp">포트폴리오</a></li>
+                        <li><a href="/portfolio">포트폴리오</a></li>
                     </ul>
                  </li>
                 
                   <li>
                     <a href="">Connect</a>
                     <ul>
-                        <li><a href="/TeamProject02/order/newOrder.jsp">신규문의</a></li>
-                        <li><a href="/TeamProject02/order/oldOrderLogin.jsp">기존문의</a></li>
+                        <li><a href="/newOrder">신규문의</a></li>
+                        <li><a href="/oldOrderLogin">기존문의</a></li>
                     </ul>
                   </li>
                 
                    <li>
                     <a href="">Recruitment</a>
                     <ul>
-                        <li><a href="/TeamProject02/recruit/newRecruitBoard.jsp"> 신규채용</a></li>
-                        <li><a href="/TeamProject02/recruit/myRecruitLogin.jsp">나의 지원서</a></li>
+                        <li><a href="/newRecruitBoard"> 신규채용</a></li>
+                        <li><a href="/myRecruitLogin">나의 지원서</a></li>
                     </ul>
                   </li>
             </ul>
@@ -460,7 +438,7 @@ main{
     <div class="mainSentence">
 		<div class="mainFirst">
 			<div class="button-area">
-				<button type="button" onclick="location.href='/TeamProject02/order/newOrder.jsp'" class="button-style button-style:hover">Join Us</button>
+				<button type="button" onclick="location.href='/newOrder'" class="button-style button-style:hover">Join Us</button>
 		    </div>
 			<div class="mainFirstSentence">다양한 생각을 나누며 놀라운 세상을 만들어요.</div>
 			<div class="mainFirstSentence">그 길을 저희 Grape가 함께 걷고 싶습니다.</div>
@@ -474,10 +452,10 @@ main{
 	<div class="mainSecondPartSentence"><img src="./image/speaker.png" width="80px">&nbsp;Find Your Interest</div>
 	
 	<div class="button-area-recruit">
-		<span class="button-area"><button type="button" onclick="location.href='/TeamProject02/companyInfo.jsp'" class="button-style-recruit button-style-recruit:hover">#회사소개</button></span>
-		<span class="button-area"><button type="button" onclick="location.href='/TeamProject02/portfolio.jsp'" class="button-style-recruit button-style-recruit:hover">#포트폴리오</button></span>
-		<span class="button-area"><button type="button" onclick="location.href='/TeamProject02/order/newOrder.jsp'" class="button-style-recruit button-style-recruit:hover">#신규문의</button></span>
-		<span class="button-area"><button type="button" onclick="location.href='/TeamProject02/recruit/newRecruitBoard.jsp'" class="button-style-recruit button-style-recruit:hover">#신규채용</button></span>
+		<span class="button-area"><button type="button" onclick="location.href='/info'" class="button-style-recruit button-style-recruit:hover">#회사소개</button></span>
+		<span class="button-area"><button type="button" onclick="location.href='/portfolio'" class="button-style-recruit button-style-recruit:hover">#포트폴리오</button></span>
+		<span class="button-area"><button type="button" onclick="location.href='/newOrder'" class="button-style-recruit button-style-recruit:hover">#신규문의</button></span>
+		<span class="button-area"><button type="button" onclick="location.href='/newRecruitBoard'" class="button-style-recruit button-style-recruit:hover">#신규채용</button></span>
 	</div>	
 </div>
 
@@ -499,18 +477,18 @@ main{
     <div class="footer-standard">
 	  <div class="footer-subtitle">Company</div>
 		  <a href="companyInfo.jsp"class="footer-menu-item">About Us</a>  
-		  <a href="portfolio.jsp"class="footer-menu-item">History</a>
+		  <a href="/portfolio"class="footer-menu-item">History</a>
     </div>
       
     <div class="footer-standard">
       <div class="footer-subtitle">Communicates</div>
-		  <a href="/TeamProject02/order/newOrder.jsp" class="footer-menu-item">Question</a>
+		  <a href="/newOrder" class="footer-menu-item">Question</a>
 		  <a href="https://www.instagram.com"class="footer-menu-item">Instagram</a>
     </div>
     
     <div class="footer-standard">
       <div class="footer-subtitle">Recruitment</div>
-		  <a href="/TeamProject02/recruit/myRecruitLogin.jsp"class="footer-menu-item">My application</a>
+		  <a href="/myRecruitLogin"class="footer-menu-item">My application</a>
     </div>
  </div>
     

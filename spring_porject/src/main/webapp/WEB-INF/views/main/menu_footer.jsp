@@ -35,18 +35,18 @@
     <div class="footer-standard">
 	  <div class="footer-subtitle">Company</div>
 		  <a href="/info" class="footer-menu-item">About Us</a>  
-		  <a href="/TeamProject02/portfolio.jsp"class="footer-menu-item">History</a>
+		  <a href="/portfolio"class="footer-menu-item">History</a>
     </div>
       
     <div class="footer-standard">
       <div class="footer-subtitle">Communicates</div>
-		  <a href="/TeamProject02/order/newOrder.jsp" class="footer-menu-item">Question</a>
+		  <a href="/newOrder" class="footer-menu-item">Question</a>
 		  <a href="https://www.instagram.com"class="footer-menu-item">Instagram</a>
     </div>
     
     <div class="footer-standard">
       <div class="footer-subtitle">Recruitment</div>
-		  <a href="/TeamProject02/recruit/myRecruitLogin.jsp"class="footer-menu-item">My application</a>
+		  <a href="/myRecruitLogin"class="footer-menu-item">My application</a>
     </div>
  </div>
     

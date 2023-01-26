@@ -27,7 +27,7 @@
 			if(i<10){
 				no = "0"+i;
 			}
-			var src = "portfolioImages/IMG"+no+".jpg";
+			var src = "./portfolioImages/IMG"+no+".jpg";
 			var name = "IMG"+no+"jpg";
 			var div = $("<div></div>").addClass("imgDIV");
 			var a = $("<a href='#'></a>").attr("id","IMGlink");
