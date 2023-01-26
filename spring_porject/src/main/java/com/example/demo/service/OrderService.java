@@ -24,4 +24,12 @@ public class OrderService {
 	public void insert(CustomerNew c) {
 		dao.insert(c);
 	}
+	
+	public void insertOrigin() {
+		dao.insertOrigin();
+	}
+	
+	public CustomerNew login(String cName, String cPhone) {
+		return dao.findByCNAMEAndCPHONE(cName, cPhone);
+	}
 }

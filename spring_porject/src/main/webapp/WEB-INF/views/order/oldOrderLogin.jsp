@@ -13,17 +13,17 @@
 <script src="https://kit.fontawesome.com/bb9544ccb9.js" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
-	$(function(){
+	/* $(function(){
 		$("#oldOrderLogin").submit(function(e){
 			e.preventDefault();
 			var data = $(this).serializeArray();
-			//console.log(data);
+			console.log(data);
 			$.ajax({
-				url:"/TeamProject02/OldOrderLoginCheck",
+				url:"/oldOrderLogInCheck",
 				data:data,
 				type: "post",
 				success:function(cNo){
-					//console.log(cNo);
+					console.log(cNo);
 					if(cNo > 0){
 						alert("로그인 성공");
 						//액션 통해서 페이지 옮겨도 됩니다.
@@ -37,7 +37,7 @@
 				}
 			})
 		})
-	});
+	}); */
 	
 	function AddInfoFailed() {
 		var queryString = document.location.search.replace('?','');
@@ -65,17 +65,17 @@
 <!-- 메뉴바 -->
 	  <jsp:include page="../main/menu_header.jsp" flush="false"/>
 <!-- 메뉴바 -->
-	<form action="" method="post" id="oldOrderLogin" style="margin:100px 100px 100px 100px;" >
+	<form action="/oldOrderLogInCheck" method="get" id="oldOrderLogin" style="margin:100px 100px 100px 100px;" >
 	<div class="container">
 		<h1>문의 업체 확인 절차</h1>
 		<div class="col-md-6" >
 		    <label for="cCode" class="form-label">회사 상호명</label>
-		    <input type="text" class="form-control" id="cName" placeholder="회사 상호명을 영문으로 입력해주세요" name="cName" >
+		    <input type="text" class="form-control" id="cName" placeholder="회사 상호명을 영문으로 입력해주세요" name="CNAME" >
 	 	</div>
 		<hr>
 		<div class="col-md-6">
 		    <label for="cCode" class="form-label">담당자분 전화 번호</label>
-		    <input type="password" class="form-control" id="cCode" placeholder="담당자분 전화 번호 '-'을 제외한 숫자를 입력해주세요" name="cPhone">
+		    <input type="password" class="form-control" id="cCode" placeholder="담당자분 전화 번호 '-'을 제외한 숫자를 입력해주세요" name="CPHONE">
 	 	</div>
 	 	<hr>
 		<div class="col-auto">	
