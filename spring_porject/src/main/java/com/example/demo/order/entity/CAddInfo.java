@@ -18,8 +18,5 @@ public class CAddInfo {
 	private int ADDINFONO;
 	
 	private String CONTENT;
-
-	@ManyToOne
-	@JoinColumn(name ="CNO", insertable = true, updatable = true)
-	private CustomerNew customerNew;
+	private int CNO;
 }

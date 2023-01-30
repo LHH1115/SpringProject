@@ -58,6 +58,7 @@ public class ViewController {
 		return "recruit/myRecruitLogin";
 	}
 	
+	
 //	@GetMapping("/mav")
 //	public ModelAndView mav() {
 //		ModelAndView mav = new ModelAndView();

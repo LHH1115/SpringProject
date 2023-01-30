@@ -1,12 +1,15 @@
 package com.example.demo.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.dao.OrderDAO;
+import com.example.demo.dao.OrderNewDAO;
+import com.example.demo.dao.OrderOriginDAO;
 import com.example.demo.order.entity.CustomerNew;
+import com.example.demo.order.entity.CustomerOrigin;
 
 import lombok.Setter;
 
@@ -15,21 +18,40 @@ import lombok.Setter;
 public class OrderService {
 
 	@Autowired
-	private OrderDAO dao;
+	private OrderNewDAO ONdao;
+	
+	@Autowired
+	private OrderOriginDAO OOdao;
 	
 	public List<CustomerNew> findAll(){
-		return dao.findAll();
+		return ONdao.findAll();
 	}
 	
 	public void insert(CustomerNew c) {
-		dao.insert(c);
+		ONdao.insert(c);
 	}
 	
 	public void insertOrigin() {
-		dao.insertOrigin();
+		OOdao.insertOrigin();
 	}
 	
 	public CustomerNew login(String cName, String cPhone) {
-		return dao.findByCNAMEAndCPHONE(cName, cPhone);
+		return ONdao.findByCNAMEAndCPHONE(cName, cPhone);
 	}
+	
+	public CustomerNew findByCNO(int CNO) {
+		return ONdao.findByCNO(CNO);
+	}
+	
+	public CustomerOrigin findOrign(int CNO) {
+		CustomerOrigin c = null;
+		Optional<CustomerOrigin> op = OOdao.findById(CNO);
+		if(op.isPresent()) {
+			c = op.get();
+		}else {
+			System.out.println("데이터 없음!!");
+		}
+		return c;
+	}
+	
 }

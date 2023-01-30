@@ -13,32 +13,6 @@
 <script src="https://kit.fontawesome.com/bb9544ccb9.js" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
-	/* $(function(){
-		$("#oldOrderLogin").submit(function(e){
-			e.preventDefault();
-			var data = $(this).serializeArray();
-			console.log(data);
-			$.ajax({
-				url:"/oldOrderLogInCheck",
-				data:data,
-				type: "post",
-				success:function(cNo){
-					console.log(cNo);
-					if(cNo > 0){
-						alert("로그인 성공");
-						//액션 통해서 페이지 옮겨도 됩니다.
-						//$(location).attr('href', "oldOrderDetail.jsp?cNo="+cno);
-						$("#cNo").val(cNo)
-						$("#logForm").trigger("submit");
-					}else{
-						alert("로그인 실패");
-						$("#cPhone").empty();
-					}
-				}
-			})
-		})
-	}); */
-	
 	function AddInfoFailed() {
 		var queryString = document.location.search.replace('?','');
         var parameters = queryString.split('&');
@@ -55,8 +29,42 @@
         }
 	}
 	
+	function useOldId() {
+		var queryString = document.location.search.replace('?','');
+        var parameters = queryString.split('&');
+        for (i=0; i<parameters.length; i++)
+        {
+            if (parameters[i].substring(0,9) == 'useOldId=')
+            {
+                if(parameters[i].replace('useOldId=','') == 'false')
+                {
+                    alert('기존 문의 내역을 이용해주세요');
+                    return;
+                }
+            }
+        }
+	}
+	
+	function checkId() {
+		var queryString = document.location.search.replace('?','');
+        var parameters = queryString.split('&');
+        for (i=0; i<parameters.length; i++)
+        {
+            if (parameters[i].substring(0,6) == 'login=')
+            {
+                if(parameters[i].replace('login=','') == 'false')
+                {
+                    alert('올바른 정보를 입력하세요');
+                    return;
+                }
+            }
+        }
+	}
+	
 	function onload() {
 		AddInfoFailed();
+		useOldId();
+		checkId();
 	}
 </script>
 </head>

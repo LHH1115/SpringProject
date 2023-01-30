@@ -9,11 +9,12 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.data.repository.query.Param;
 
 import com.example.demo.order.entity.CustomerNew;
+import com.example.demo.order.entity.CustomerOrigin;
 
 import jakarta.transaction.Transactional;
 
 @EnableJpaRepositories("com.acme.repositories")
-public interface OrderDAO extends JpaRepository<CustomerNew, Integer> {
+public interface OrderNewDAO extends JpaRepository<CustomerNew, Integer> {
 
 	@Modifying
 	@Transactional
@@ -22,16 +23,12 @@ public interface OrderDAO extends JpaRepository<CustomerNew, Integer> {
 			+ "VALUES((SELECT MAX(CNO)+1 FROM CUSTOMERNEW),:#{#c.CNAME},:#{#c.CPHONE},:#{#c.CADDR},:#{#c.CMANAGER},:#{#c.CEMAIL},:#{#c.CSERVICE},:#{#c.CPRICE},:#{#c.CINFO},:#{#c.CPORTFOLIO})")
 	public void insert(@Param(value = "c") CustomerNew c);
 	
-	@Modifying
-	@Transactional
-	@Query(nativeQuery = true, value = ""
-			+ "INSERT INTO CUSTOMERORIGIN(CNO, CPROGRESS) VALUES( (SELECT MAX(CNO)+1 FROM CUSTOMERORIGIN),0 )")
-	public void insertOrigin();
-	
 //	@Modifying
 //	@Transactional
 //	@Query("SELECT CNO FROM CUSTOMERNEW WHERE CNAME = :CNAME AND CPHONE = :CPHONE")
 //	public String login(@Param(value = "CNAME") String CNAME, @Param(value = "CPHONE") String CPHONE);
 	
 	public CustomerNew findByCNAMEAndCPHONE(String CNAME, String CPHONE);
+
+	public CustomerNew findByCNO(int cNO);
 }

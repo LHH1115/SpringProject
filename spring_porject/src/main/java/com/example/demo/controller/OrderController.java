@@ -24,15 +24,25 @@ public class OrderController {
 		ModelAndView mav = new ModelAndView();
 		System.out.println(c);
 		int cService = c.getCSERVICE();
+		CustomerNew oldC = null;
 		// 올바른 제작 구분 선택 요청
 		if(cService == 8) {
 			mav.addObject("cService", "false");
 			mav.setViewName("redirect:/newOrder");
 		}else {
-			os.insert(c);
-			os.insertOrigin();
-			mav.addObject("Order","true");
-			mav.setViewName("redirect:/home");
+			String cName = c.getCNAME();
+			String cPhone = c.getCPHONE();
+			oldC = os.login(cName, cPhone);
+			if(oldC != null) {
+				// 기존 등록된 문의 사용 요청
+				mav.addObject("useOldId", "false");
+				mav.setViewName("redirect:/oldOrderLogin");
+			}else {
+				os.insert(c);
+				os.insertOrigin();
+				mav.addObject("Order","true");
+				mav.setViewName("redirect:/home");
+			}
 		}
 		return mav;
 	}
@@ -40,8 +50,7 @@ public class OrderController {
 	//기존 문의 로그인
 	@GetMapping("/oldOrderLogInCheck")
 	public ModelAndView oldOrderLogInCheck(CustomerNew c) {
-		ModelAndView mav = new ModelAndView("redirect:/oldOrderLogin");
-		System.out.println(c);
+		ModelAndView mav = new ModelAndView();
 		String cName = c.getCNAME();
 		String cPhone = c.getCPHONE();
 		CustomerNew loginC = null;
@@ -49,12 +58,15 @@ public class OrderController {
 		if(loginC != null) {
 			// 로그인 성공
 			int cNo = loginC.getCNO();
-			System.out.println(cNo);
-//				mav.addObject("c",loginC);
-//				mav.setViewName("");
+			mav.addObject("cNO", cNo);
+			mav.addObject("cName", os.findByCNO(cNo).getCNAME());
+			mav.addObject("cProgress", os.findOrign(cNo).getCPROGRESS());
+			mav.setViewName("order/oldOrderDetail");
 		}else {
 			// 로그인 실패
-			System.out.println("올바른 아이디와 암호 입력 요청");
+			// 올바른 아이디와 암호 입력 요청
+			mav.addObject("login","false");
+			mav.setViewName("redirect:/oldOrderLogin");
 		}
 		return mav;
 	}

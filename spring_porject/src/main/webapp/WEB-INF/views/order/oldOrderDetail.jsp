@@ -29,7 +29,7 @@
 
 
 <!-- 메뉴바 -->
-	  <jsp:include page="../menu_header.jsp" flush="false"/>
+	  <jsp:include page="../main/menu_header.jsp" flush="false"/>
 <!-- 메뉴바 -->
 	
 <form id="f" style="margin:100px 100px 100px 100px;" method="post" action="oldOrderOK.do" enctype="multipart/form-data">
@@ -65,7 +65,7 @@
 </form>	
 
 <!-- 하단바 -->
-	<jsp:include page="../menu_footer.jsp" flush="false"/>
+	<jsp:include page="../main/menu_footer.jsp" flush="false"/>
 <!-- 하단바  -->
 
 </body>
