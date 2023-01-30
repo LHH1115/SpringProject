@@ -32,7 +32,7 @@
 	  <jsp:include page="../main/menu_header.jsp" flush="false"/>
 <!-- 메뉴바 -->
 	
-<form id="f" style="margin:100px 100px 100px 100px;" method="post" action="oldOrderOK.do" enctype="multipart/form-data">
+<form id="f" style="margin:100px 100px 100px 100px;" action="/oldOrderSubmit" enctype="multipart/form-data">
 	
 	<h1 id="cName">${cName } 진행상황</h1>
 	<img src="" style="width:800px; height:500px;" id="cPhoto"><br>
@@ -47,9 +47,9 @@
 	<hr>
 	<div class="mb-3">
 		  <label for="cAdd" class="form-label">추가 문의 내용</label>
-		  <textarea name="content" id="content" class="form-control" id="addInfoNo" rows="3" placeholder="추가 문의 내용 입력바랍니다." required="required" autocomplete="off"></textarea>
+		  <textarea name="CONTENT" id="content" class="form-control" id="addInfoNo" rows="3" placeholder="추가 문의 내용 입력바랍니다." required="required" autocomplete="off"></textarea>
 	</div>
-		<input type="hidden" name="cNo" value="${cNo }">
+		<input type="hidden" name="CNO" value="${CNO }">
 	
 	<div class="input-group" style="width:500px;">
  	 <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="uploadFile" >

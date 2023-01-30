@@ -54,4 +54,7 @@ public class OrderService {
 		return c;
 	}
 	
+	public void insertAddInfo(int CNO, String CONTENT) {
+		OOdao.insertAddInfo(CNO, CONTENT);
+	}
 }

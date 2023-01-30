@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.example.demo.order.entity.CAddInfo;
 import com.example.demo.order.entity.CustomerNew;
 import com.example.demo.service.OrderService;
 
@@ -47,7 +48,7 @@ public class OrderController {
 		return mav;
 	}
 	
-	//기존 문의 로그인
+	// 기존 문의 로그인
 	@GetMapping("/oldOrderLogInCheck")
 	public ModelAndView oldOrderLogInCheck(CustomerNew c) {
 		ModelAndView mav = new ModelAndView();
@@ -58,7 +59,7 @@ public class OrderController {
 		if(loginC != null) {
 			// 로그인 성공
 			int cNo = loginC.getCNO();
-			mav.addObject("cNO", cNo);
+			mav.addObject("CNO", cNo);
 			mav.addObject("cName", os.findByCNO(cNo).getCNAME());
 			mav.addObject("cProgress", os.findOrign(cNo).getCPROGRESS());
 			mav.setViewName("order/oldOrderDetail");
@@ -67,6 +68,19 @@ public class OrderController {
 			// 올바른 아이디와 암호 입력 요청
 			mav.addObject("login","false");
 			mav.setViewName("redirect:/oldOrderLogin");
+		}
+		return mav;
+	}
+	
+	// 추가 문의 등록
+	@GetMapping("/oldOrderSubmit")
+	public ModelAndView oldOrderSubmit(CAddInfo c) {
+		ModelAndView mav = new ModelAndView();
+		if(c.getCONTENT() != null || c.getCONTENT() != "") {
+			// 파일 처리 기능 필요
+			os.insertAddInfo(c.getCNO(), c.getCONTENT());
+			mav.addObject("AddInfo","true");
+			mav.setViewName("redirect:/home");
 		}
 		return mav;
 	}
